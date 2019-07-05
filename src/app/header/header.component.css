@@ -1,0 +1,11 @@
+.navbar-inverse {
+    background-color: black !important;
+    border-color: transparent;
+}
+.navbar {
+    border-radius: 0px !important;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: black !important;
+    background-color: #FFF !important;
+}

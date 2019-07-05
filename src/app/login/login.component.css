@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+  border-radius: 5px;
+  padding: 20px 0 30px 0;
+}
+.is-large {
+  font-size: 20px;
+  font-weight: bold;
+}
+.fa-check-circle {
+	color: green;
+	font-size: 20px;
+}
+.fa-times-circle {
+	color: red;
+	font-size: 20px;
+}
+table {
+	border: 1px solid #ccc;
+}
+tbody tr {
+	background: #eff1f8;
+}
+.error-class {
+	color: red;
+	background: white !important;
+}
+.pending-class {
+	background: white !important;
+}
+.vm-table {
+	width: 40%;
+}
+.db-tbody {
+	display:block;
+    height:350px;
+    overflow:auto;
+}
+.db-thead, .db-tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
+}
+.db-thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}

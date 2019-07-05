@@ -1,0 +1,41 @@
+<div class="container">
+<div class="row has-columns">
+  <div class="column is-four-quarter has-padding">
+    <div class="has-margin-bottom">
+      <div class="content is-large is-strong">Monitor Service</div>
+    </div>
+
+    <div class="has-margin-bottom">
+      <div class="has-margin-bottom">
+        <div class="row has-columns" *ngIf="serviceData.length">
+          <table class="table">
+          <thead>
+            <tr>
+              <th>SERVICE NAME</th>
+              <th>SERVICE TYPE</th>
+              <th>SERVICE STATUS</th>
+              <th>ERROR MESSAGE</th>
+              <th>RESTART ENABLED</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let data of serviceData" [ngClass]="(data.status == 1)?'':'error-class'">
+              <td><div>{{ data.service_name }}</div></td>
+              <td><div>{{ data.type }}</div></td>
+              <td><div>{{ data.status }}</div></td>
+              <td>
+                  <div *ngIf="data.service_status == 1">{{ data.error }}</div>
+              </td>
+              <td>
+                  <div><i [ngClass]="(data.status == 1)?'fa fa-check-circle':'fa fa-times-circle'"></i></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
